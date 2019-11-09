@@ -55,6 +55,7 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Patient.cs" />
+    <Compile Include="PatientInsurancePolicy.cs" />
     <Compile Include="PatientPassport.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
