@@ -5,11 +5,11 @@ using System.Text;
 
 namespace Stomatology
 {
-    class Post
+    class DoctorPost
     {
         public string Name { get; set; }
 
-        public Post(string name)
+        public DoctorPost(string name)
         {
             this.Name = name;
         }

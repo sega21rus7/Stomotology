@@ -3,25 +3,25 @@
   <Class Name="Stomatology.Doctor">
     <Position X="2.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAACAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Doctor.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Doctor.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Post" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="Stomatology.Post">
+  <Class Name="Stomatology.DoctorPost">
     <Position X="4.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Post.cs</FileName>
+      <FileName>Models\DoctorPost.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Stomatology.Person" Collapsed="true">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAEAAAAAAAAAABAAQAAAAAAAAAAAAAAAAACIAAAg=</HashCode>
-      <FileName>Person.cs</FileName>
+      <FileName>Abstract models\Person.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
@@ -29,7 +29,7 @@
     <Position X="0.5" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAABIAAAAAAAAIAAACAAAAAAAAAAA=</HashCode>
-      <FileName>Patient.cs</FileName>
+      <FileName>Models\Patient.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Address" />
@@ -41,28 +41,28 @@
     <Position X="3.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAIAAAAAAACAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Address.cs</FileName>
+      <FileName>Models\Address.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Stomatology.PatientPassport" Collapsed="true">
     <Position X="3.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>PatientPassport.cs</FileName>
+      <FileName>Models\PatientPassport.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Stomatology.PatientInsurancePolicy" Collapsed="true">
     <Position X="3.75" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>PatientInsurancePolicy.cs</FileName>
+      <FileName>Models\PatientInsurancePolicy.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Stomatology.Service">
     <Position X="7.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAAAAABAAAAAQAAAAAAAAAAQAAACIAAAA=</HashCode>
-      <FileName>Service.cs</FileName>
+      <FileName>Models\Service.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Type" />
@@ -73,20 +73,21 @@
     <Position X="10" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAACIAAAA=</HashCode>
-      <FileName>ServiceType.cs</FileName>
+      <FileName>Models\ServiceType.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Stomatology.Visit">
     <Position X="6.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAABAAAAAAgAAAAQAQAAAAAAGIACAA=</HashCode>
-      <FileName>Visit.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAABAAAgAAgAAAAQAQAAAAAAGIACAA=</HashCode>
+      <FileName>Models\Visit.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Service" />
       <Property Name="Doctor" />
       <Property Name="Patient" />
+      <Property Name="Assistent" />
     </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>
@@ -94,9 +95,26 @@
     <Position X="3.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAQAAAAAAQAAABAAAAAAAAAAAAAAAAAAAACIAAAA=</HashCode>
-      <FileName>PatientDocument.cs</FileName>
+      <FileName>Models\PatientDocument.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Stomatology.Models.DoctorAssistent">
+    <Position X="9" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DoctorAssistent.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Post" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Stomatology.Models.DoctorAssistentPost" Collapsed="true">
+    <Position X="10.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DoctorAssistentPost.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

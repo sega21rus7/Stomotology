@@ -7,14 +7,12 @@ namespace Stomatology
 {
     class Doctor : Person
     {
-        public int RoomNumber { get; set; }
-        public Post Post { get; set; }
+        public DoctorPost Post { get; set; }
 
-        public Doctor(string lastName, string firstName, string middleName, Post post, int roomNumber) : 
+        public Doctor(string lastName, string firstName, string middleName, DoctorPost post) : 
            base(lastName, firstName, middleName)
         {
             this.Post = post;
-            this.RoomNumber = roomNumber;
         }
     }
 }
