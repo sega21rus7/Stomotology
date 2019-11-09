@@ -5,20 +5,25 @@ using System.Text;
 
 namespace Stomatology
 {
-    abstract class Person
+    abstract class Person : IPrimaryKey
     {
-        public int id;
-        public int count;
+        int pk;
+        int count;
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string MiddleName { get; set; }
 
         public Person(string lastName, string firstName, string middleName)
         {
-            this.id = this.count++;
+            AssignPk();
             this.FirstName = firstName;
             this.LastName = lastName;
             this.MiddleName = middleName;
+        }
+
+        public void AssignPk()
+        {
+            pk = count++;
         }
     }
 }
