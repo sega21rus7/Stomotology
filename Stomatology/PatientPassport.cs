@@ -5,22 +5,11 @@ using System.Text;
 
 namespace Stomatology
 {
-    class PatientPassport : IPrimaryKey
+    class PatientPassport : PatientDocument
     {
-        int pk;
-        int count;
-        int series;
-        int number;
-
         public PatientPassport(int series, int number)
+            : base(series, number)
         {
-            this.series = series;
-            this.number = number;
-        }
-
-        public void AssignPk()
-        {
-            pk = count++;
         }
     }
 }
