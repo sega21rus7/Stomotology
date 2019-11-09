@@ -38,7 +38,7 @@
             this.editView.Location = new System.Drawing.Point(12, 12);
             this.editView.Name = "editView";
             this.editView.RowTemplate.Height = 28;
-            this.editView.Size = new System.Drawing.Size(478, 326);
+            this.editView.Size = new System.Drawing.Size(610, 422);
             this.editView.TabIndex = 0;
             // 
             // EditForm

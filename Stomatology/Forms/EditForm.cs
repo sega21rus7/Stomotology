@@ -9,6 +9,14 @@ namespace Stomatology.Forms
         {
             InitializeComponent();
             this.MaximizeBox = false;
+
+            var excelApp = new Excel.Application();
+            var workBook = excelApp.Workbooks.Open("Patient.xlsx");
+            var workSheet = workBook.Worksheets["Лист1"];
+            
+            
+            workBook.Close(false); //закрываем книгу, изменения не сохраняем
+            excelApp.Quit(); //закрываем Excel
         }
     }
 }
