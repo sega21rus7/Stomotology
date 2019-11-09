@@ -7,6 +7,7 @@ namespace Stomatology.Forms
         public FilterForm()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
         }
     }
 }

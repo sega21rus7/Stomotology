@@ -7,6 +7,7 @@ namespace Stomatology.Forms
         public EditForm()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
         }
     }
 }

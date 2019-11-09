@@ -9,6 +9,7 @@ namespace Stomatology
         public MainForm()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)
