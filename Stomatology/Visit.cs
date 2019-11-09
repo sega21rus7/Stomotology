@@ -9,11 +9,11 @@ namespace Stomatology
     {
         int pk;
         int count;
-        public Doctor Doctor;
-        public Service Service;
         public DateTime StartDate;
         public DateTime EndDate;
-        public Patient Patient;
+        public Service Service { get; set; }
+        public Doctor Doctor { get; set; }
+        public Patient Patient { get; set; } 
 
         public Visit(Doctor doctor, Patient patient, Service service, DateTime startDate, DateTime endDate)
         {
@@ -23,39 +23,6 @@ namespace Stomatology
             this.StartDate = startDate;
             this.EndDate = endDate;
             this.Patient = patient;
-        }
-
-        internal Service Service1
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        internal Doctor Doctor1
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        internal Patient Patient1
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
         }
 
         public void AssignPk()

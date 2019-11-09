@@ -11,18 +11,7 @@ namespace Stomatology
         int count;
         public string Name { get; set; }
         public string Price { get; set; }
-        public ServiceType Type { get; set; }
-
-        internal ServiceType ServiceType
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public ServiceType Type  { get; set; }
 
         public Service(string name, string price, ServiceType type)
         {
