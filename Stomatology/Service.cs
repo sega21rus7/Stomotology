@@ -11,13 +11,14 @@ namespace Stomatology
         int count;
         public string Name { get; set; }
         public string Price { get; set; }
-        //public string Type { get; set; }
+        public string Type { get; set; }
 
-        public Service(string name, string price)
+        public Service(string name, string price, string type)
         {
             AssignPk();
             this.Name = name;
             this.Price = price;
+            this.Type = type;
         }
 
         public void AssignPk()
