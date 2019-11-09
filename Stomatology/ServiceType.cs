@@ -5,25 +5,22 @@ using System.Text;
 
 namespace Stomatology
 {
-    class Service : IPrimaryKey
+    class ServiceType : IPrimaryKey
     {
         int pk;
         int count;
-        public string Name { get; set; }
-        public string Price { get; set; }
-        public ServiceType Type { get; set; }
 
-        public Service(string name, string price, ServiceType type)
+        public string Name { get; set; }
+
+        public ServiceType(string name)
         {
-            AssignPk();
             this.Name = name;
-            this.Price = price;
-            this.Type = type;
         }
 
         public void AssignPk()
         {
             pk = count++;
         }
+
     }
 }
