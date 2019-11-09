@@ -28,20 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.editView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.editView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // editView
+            // 
+            this.editView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.editView.Location = new System.Drawing.Point(12, 12);
+            this.editView.Name = "editView";
+            this.editView.RowTemplate.Height = 28;
+            this.editView.Size = new System.Drawing.Size(478, 326);
+            this.editView.TabIndex = 0;
             // 
             // EditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(663, 484);
+            this.Controls.Add(this.editView);
             this.Name = "EditForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ввод/Редактирование данных";
+            ((System.ComponentModel.ISupportInitialize)(this.editView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView editView;
     }
 }
