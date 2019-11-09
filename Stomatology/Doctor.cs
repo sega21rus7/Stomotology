@@ -10,6 +10,17 @@ namespace Stomatology
         public Post Post { get; set; }
         public int RoomNumber { get; set; }
 
+        internal Post Post1
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
         public Doctor(string lastName, string firstName, string middleName, Post post, int roomNumber) : 
            base(lastName, firstName, middleName)
         {
