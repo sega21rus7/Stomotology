@@ -29,32 +29,32 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureHello = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.buttonFilter = new System.Windows.Forms.Button();
+            this.buttonEdit = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureHello)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pictureHello
             // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(957, 724);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.pictureHello.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureHello.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureHello.Image = ((System.Drawing.Image)(resources.GetObject("pictureHello.Image")));
+            this.pictureHello.Location = new System.Drawing.Point(0, 0);
+            this.pictureHello.Name = "pictureHello";
+            this.pictureHello.Size = new System.Drawing.Size(957, 724);
+            this.pictureHello.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureHello.TabIndex = 2;
+            this.pictureHello.TabStop = false;
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.button2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.buttonFilter, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.buttonEdit, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(287, 392);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
@@ -63,25 +63,27 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(430, 165);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
-            // button2
+            // buttonFilter
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(3, 85);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(424, 77);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Найти/Отфильтровать/Отсортировать";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonFilter.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonFilter.Location = new System.Drawing.Point(3, 85);
+            this.buttonFilter.Name = "buttonFilter";
+            this.buttonFilter.Size = new System.Drawing.Size(424, 77);
+            this.buttonFilter.TabIndex = 3;
+            this.buttonFilter.Text = "Найти/Отфильтровать/Отсортировать";
+            this.buttonFilter.UseVisualStyleBackColor = true;
+            this.buttonFilter.Click += new System.EventHandler(this.buttonFilter_Click);
             // 
-            // button1
+            // buttonEdit
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(424, 76);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Ввести/Отредактировать данные";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonEdit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonEdit.Location = new System.Drawing.Point(3, 3);
+            this.buttonEdit.Name = "buttonEdit";
+            this.buttonEdit.Size = new System.Drawing.Size(424, 76);
+            this.buttonEdit.TabIndex = 2;
+            this.buttonEdit.Text = "Ввести/Отредактировать данные";
+            this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // MainForm
             // 
@@ -89,10 +91,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(957, 724);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureHello);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Приветственное меню";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureHello)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -100,9 +103,9 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureHello;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonEdit;
+        private System.Windows.Forms.Button buttonFilter;
     }
 }

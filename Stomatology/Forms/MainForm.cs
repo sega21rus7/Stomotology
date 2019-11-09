@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
+using Stomatology.Forms;
 
 namespace Stomatology
 {
@@ -14,6 +9,20 @@ namespace Stomatology
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+            var form = new EditForm();
+            //this.Hide();
+            form.Show();
+        }
+
+        private void buttonFilter_Click(object sender, EventArgs e)
+        {
+            var form = new FilterForm();
+            //this.Hide();
+            form.Show();
         }
     }
 }
