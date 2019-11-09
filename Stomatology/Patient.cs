@@ -8,11 +8,11 @@ namespace Stomatology
     class Patient : Person
     {
         public DateTime Birthday { get; set; }
-        public string Address { get;set; }
+        public Address Address { get;set; }
         public PatientPassport Passport { get; set; }
 
         public Patient(string lastName, string firstName, string middleName, 
-            DateTime birthday, string address, PatientPassport passport) : 
+            DateTime birthday, Address address, PatientPassport passport) : 
            base(lastName, firstName, middleName)
         {
             this.Birthday = birthday;
