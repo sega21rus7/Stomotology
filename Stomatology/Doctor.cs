@@ -5,7 +5,14 @@ using System.Text;
 
 namespace Stomatology
 {
-    class Doctor
+    class Doctor : Person
     {
+        public string Post { get; set; }
+
+        public Doctor(string lastName, string firstName, string middleName, string post) : 
+           base(lastName, firstName, middleName)
+        {
+            this.Post = post;
+        }
     }
 }
