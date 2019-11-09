@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Stomatology
 {
-    class ServiceCost
+    class ServiceCost : IPrimaryKey
     {
     }
 }
