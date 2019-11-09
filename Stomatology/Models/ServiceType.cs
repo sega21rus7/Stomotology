@@ -7,20 +7,12 @@ namespace Stomatology
 {
     class ServiceType : IPrimaryKey
     {
-        int pk;
-        int count;
-
+        public int Id { get; set; }
         public string Name { get; set; }
 
         public ServiceType(string name)
         {
             this.Name = name;
         }
-
-        public void AssignPk()
-        {
-            pk = count++;
-        }
-
     }
 }

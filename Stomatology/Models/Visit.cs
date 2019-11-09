@@ -8,8 +8,7 @@ namespace Stomatology
 {
     class Visit : IPrimaryKey
     {
-        int pk;
-        int count;
+        public int Id { get; set; }
         public DateTime StartDate;
         public DateTime EndDate;
         public Service Service { get; set; }
@@ -20,18 +19,12 @@ namespace Stomatology
         public Visit(Doctor doctor, DoctorAssistent assistent, Patient patient, 
             Service service, DateTime startDate, DateTime endDate)
         {
-            AssignPk();
             this.Doctor = doctor;
             this.Service = service;
             this.StartDate = startDate;
             this.EndDate = endDate;
             this.Patient = patient;
             this.Assistent = assistent;
-        }
-
-        public void AssignPk()
-        {
-            pk = count++;
         }
     }
 }

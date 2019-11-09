@@ -5,10 +5,8 @@ using System.Text;
 
 namespace Stomatology
 {
-    abstract class PatientDocument : IPrimaryKey
+    abstract class PatientDocument
     {
-        int pk;
-        int count;
         protected int series;
         protected int number;
 
@@ -16,11 +14,6 @@ namespace Stomatology
         {
             this.series = series;
             this.number = number;
-        }
-
-        public void AssignPk()
-        {
-            pk = count++;
         }
     }
 }

@@ -7,6 +7,6 @@ namespace Stomatology
 {
     interface IPrimaryKey
     {
-        void AssignPk();
+        int Id { get; set; }
     }
 }

@@ -5,8 +5,9 @@ using System.Text;
 
 namespace Stomatology
 {
-    class DoctorPost
+    class DoctorPost : IPrimaryKey
     {
+        public int Id { get; set; }
         public string Name { get; set; }
 
         public DoctorPost(string name)
