@@ -22,7 +22,6 @@ namespace Stomatology.Forms
             var columnsCount = sheetRange.Columns.Count;
             workBook.Close(false); //закрываем книгу, изменения не сохраняем
             excelApp.Quit(); //закрываем Excel
-
             //editView.DataSource = sheetRange;
         }
     }
