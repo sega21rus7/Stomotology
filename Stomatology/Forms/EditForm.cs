@@ -11,7 +11,7 @@ namespace Stomatology.Forms
             this.MaximizeBox = false;
 
             var excelApp = new Excel.Application();
-            var workBook = excelApp.Workbooks.Open("Patient.xlsx");
+            var workBook = excelApp.Workbooks.Open(Application.StartupPath + "\\Tables\\Patient.xlsx");
             var workSheet = workBook.Worksheets["Лист1"];
             
             
