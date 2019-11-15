@@ -15,14 +15,12 @@ namespace Stomatology
         private void buttonEdit_Click(object sender, EventArgs e)
         {
             var form = new EditForm();
-            //this.Hide();
             form.Show();
         }
 
         private void buttonFilter_Click(object sender, EventArgs e)
         {
             var form = new FilterForm();
-            //this.Hide();
             form.Show();
         }
     }
