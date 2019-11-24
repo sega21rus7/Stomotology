@@ -37,10 +37,10 @@
             // editView
             // 
             this.editView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.editView.Location = new System.Drawing.Point(12, 86);
+            this.editView.Location = new System.Drawing.Point(12, 155);
             this.editView.Name = "editView";
             this.editView.RowTemplate.Height = 28;
-            this.editView.Size = new System.Drawing.Size(1257, 588);
+            this.editView.Size = new System.Drawing.Size(1257, 519);
             this.editView.TabIndex = 0;
             // 
             // showButton
@@ -81,7 +81,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView editView;
+        protected System.Windows.Forms.DataGridView editView;
         private System.Windows.Forms.Button showButton;
         private System.Windows.Forms.ComboBox choiceTableBox;
     }
