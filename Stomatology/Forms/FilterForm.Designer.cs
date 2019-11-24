@@ -39,6 +39,21 @@
             // 
             this.ShowButton.Click += new System.EventHandler(this.ShowButton_Click);
             // 
+            // ChoiceTableBox
+            // 
+            this.ChoiceTableBox.Items.AddRange(new object[] {
+            "Адреса пациентов",
+            "Врачи",
+            "Ассистенты врачей",
+            "Должности ассистентов врачей",
+            "Должности врачей",
+            "Пациенты",
+            "Страховые полисы пациентов",
+            "Паспортные данные пациентов",
+            "Услуги",
+            "Типы услуг",
+            "Приемы"});
+            // 
             // SearchBox
             // 
             this.SearchBox.Location = new System.Drawing.Point(12, 79);
@@ -48,7 +63,7 @@
             // 
             // SearchButton
             // 
-            this.SearchButton.Location = new System.Drawing.Point(377, 68);
+            this.SearchButton.Location = new System.Drawing.Point(377, 74);
             this.SearchButton.Name = "SearchButton";
             this.SearchButton.Size = new System.Drawing.Size(164, 37);
             this.SearchButton.TabIndex = 4;
@@ -94,6 +109,7 @@
             this.MaximizeBox = false;
             this.Name = "FilterForm";
             this.Text = "Поиск/Фильтрация данных";
+            this.Controls.SetChildIndex(this.ExportButton, 0);
             this.Controls.SetChildIndex(this.BackButton, 0);
             this.Controls.SetChildIndex(this.ShowButton, 0);
             this.Controls.SetChildIndex(this.ChoiceTableBox, 0);
