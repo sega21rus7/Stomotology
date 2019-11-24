@@ -35,7 +35,7 @@ namespace Stomatology.Forms
         private void FilterBox_TextChanged(object sender, EventArgs e)
         {
             (editView.DataSource as DataTable).DefaultView.RowFilter =
-                String.Format("Convert({0},'System.String') contains '{1}%'", 
+                String.Format("Convert({0},'System.String') like '%{1}%'", 
                 FilterKeyBox.Text, FilterValueBox.Text);
         }
 
