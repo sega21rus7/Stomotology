@@ -16,7 +16,7 @@ namespace Stomatology.Forms
             var tableName = ChoiceTableBox.SelectedItem.ToString();
             var className = TableAttrs.Attrs[tableName];
             editView.DataSource = GetExcelTable(className);
-            PrepareDataGridView(editView);
+            PrepareDataGridView();
         }
 
         private void EditForm_Load(object sender, System.EventArgs e)
@@ -35,15 +35,20 @@ namespace Stomatology.Forms
                 ServiceType.TableName,
                 Visit.TableName,
             };
-            ChoiceTableBox.Items.Clear();
-            ChoiceTableBox.Items.AddRange(tables);
-            ChoiceTableBox.SelectedIndex = 0;
+            FillComboBox(ChoiceTableBox, tables);
         }
 
-        private void PrepareDataGridView(DataGridView view)
+        protected static void FillComboBox(ComboBox box, string[] items)
         {
-            view.AutoResizeColumns();
-            view.AllowUserToAddRows = false;
+            box.Items.Clear();
+            box.Items.AddRange(items);
+            box.SelectedIndex = 0;
+        }
+
+        private void PrepareDataGridView()
+        {
+            editView.AutoResizeColumns();
+            editView.AllowUserToAddRows = false;
         }
 
         private DataTable GetExcelTable(string fileName)

@@ -44,9 +44,7 @@ namespace Stomatology.Forms
             var headers = new string[editView.ColumnCount];
             for (var i = 0; i < headers.Length; i++)
                 headers[i] = editView.Columns[i].HeaderText;
-            FilterKeyBox.Items.Clear();
-            FilterKeyBox.Items.AddRange(headers);
-            FilterKeyBox.SelectedIndex = 0;
+            FillComboBox(FilterKeyBox, headers);
         }
     }
 }
