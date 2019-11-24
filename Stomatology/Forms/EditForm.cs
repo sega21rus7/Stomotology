@@ -15,17 +15,8 @@ namespace Stomatology.Forms
         {
             var tableName = choiceTableBox.SelectedItem.ToString();
             var className = TableAttrs.Attrs[tableName];
-
-            var path = @"..\..\..\Tables\" + className + ".xls";
-            var connPath = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + path +
-                ";Extended Properties=\"Excel 8.0;HDR=Yes;\";";
-            var conn = new OleDbConnection(connPath);
-            var adapter = new OleDbDataAdapter("select * from [Лист1$]", conn);
-            var dt = new DataTable();
-            adapter.Fill(dt);
-            editView.DataSource = dt;
-            editView.AutoResizeColumns();
-            editView.AllowUserToAddRows = false;
+            editView.DataSource = GetExcelTable(className);
+            PrepareDataGridView(editView);
         }
 
         private void EditForm_Load(object sender, System.EventArgs e)
@@ -46,6 +37,24 @@ namespace Stomatology.Forms
             };
             choiceTableBox.Items.AddRange(tables);
             choiceTableBox.SelectedIndex = 0;
+        }
+
+        private void PrepareDataGridView(DataGridView view)
+        {
+            view.AutoResizeColumns();
+            view.AllowUserToAddRows = false;
+        }
+
+        private DataTable GetExcelTable(string fileName)
+        {
+            var path = @"..\..\..\Tables\" + fileName + ".xls";
+            var connPath = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + path +
+                ";Extended Properties=\"Excel 8.0;HDR=Yes;\";";
+            var conn = new OleDbConnection(connPath);
+            var adapter = new OleDbDataAdapter("select * from [Лист1$]", conn);
+            var dt = new DataTable();
+            adapter.Fill(dt);
+            return dt;
         }
     }
 }
