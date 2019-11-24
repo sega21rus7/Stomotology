@@ -7,6 +7,8 @@ namespace Stomatology
 {
     class Patient : Person
     {
+        public static string ClassName = "Patient";
+        public static string TableName = "Пациенты";
         public DateTime Birthday { get; set; }
         public Address Address { get; set; }
         public PatientPassport Passport { get; set; }

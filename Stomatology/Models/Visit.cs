@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Stomatology.Models;
 
 namespace Stomatology
 {
     class Visit : IPrimaryKey
     {
+        public static string ClassName = "Visit";
+        public static string TableName = "Приемы";
         public int Id { get; set; }
         public DateTime StartDate;
         public DateTime EndDate;

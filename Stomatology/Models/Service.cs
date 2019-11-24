@@ -7,6 +7,8 @@ namespace Stomatology
 {
     class Service : IPrimaryKey
     {
+        public static string ClassName = "Service";
+        public static string TableName = "Услуги";
         public int Id { get; set; }
         public string Name { get; set; }
         public string Price { get; set; }

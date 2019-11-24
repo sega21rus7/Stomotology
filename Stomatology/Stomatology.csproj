@@ -70,7 +70,7 @@
     <Compile Include="Models\DoctorAssistent.cs" />
     <Compile Include="Models\DoctorAssistentPost.cs" />
     <Compile Include="Models\Patient.cs" />
-    <Compile Include="Models\PatientDocument.cs" />
+    <Compile Include="Abstract models\PatientDocument.cs" />
     <Compile Include="Models\PatientInsurancePolicy.cs" />
     <Compile Include="Models\PatientPassport.cs" />
     <Compile Include="Abstract models\Person.cs" />
@@ -80,6 +80,7 @@
     <Compile Include="Models\Service.cs" />
     <Compile Include="Models\ServiceType.cs" />
     <Compile Include="Models\Visit.cs" />
+    <Compile Include="Static classes\TableAttrs.cs" />
     <EmbeddedResource Include="Forms\EditForm.resx">
       <DependentUpon>EditForm.cs</DependentUpon>
     </EmbeddedResource>
