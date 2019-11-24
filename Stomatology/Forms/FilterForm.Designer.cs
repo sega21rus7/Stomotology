@@ -37,7 +37,7 @@
             this.ClientSize = new System.Drawing.Size(1285, 702);
             this.MaximizeBox = false;
             this.Name = "FilterForm";
-            this.Text = "Поиск/Фильтрация/Сортировка данных";
+            this.Text = "Поиск/Фильтрация данных";
             this.ResumeLayout(false);
 
         }
