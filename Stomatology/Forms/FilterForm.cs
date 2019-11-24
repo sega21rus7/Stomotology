@@ -2,12 +2,11 @@
 
 namespace Stomatology.Forms
 {
-    public partial class FilterForm : Form
+    public partial class FilterForm : EditForm
     {
         public FilterForm()
         {
             InitializeComponent();
-            this.MaximizeBox = false;
         }
     }
 }

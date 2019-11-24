@@ -25,6 +25,7 @@ namespace Stomatology.Forms
             adapter.Fill(dt);
             editView.DataSource = dt;
             editView.AutoResizeColumns();
+            editView.AllowUserToAddRows = false;
         }
 
         private void EditForm_Load(object sender, System.EventArgs e)

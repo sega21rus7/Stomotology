@@ -45,11 +45,11 @@
             // 
             // showButton
             // 
-            this.showButton.Location = new System.Drawing.Point(380, 19);
+            this.showButton.Location = new System.Drawing.Point(377, 31);
             this.showButton.Name = "showButton";
-            this.showButton.Size = new System.Drawing.Size(116, 40);
+            this.showButton.Size = new System.Drawing.Size(164, 33);
             this.showButton.TabIndex = 1;
-            this.showButton.Text = "Показать ";
+            this.showButton.Text = "Показать данные";
             this.showButton.UseVisualStyleBackColor = true;
             this.showButton.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -69,6 +69,7 @@
             this.Controls.Add(this.choiceTableBox);
             this.Controls.Add(this.showButton);
             this.Controls.Add(this.editView);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "EditForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ввод/Редактирование данных";

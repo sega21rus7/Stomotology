@@ -34,9 +34,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(639, 463);
+            this.ClientSize = new System.Drawing.Size(1285, 702);
+            this.MaximizeBox = false;
             this.Name = "FilterForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Поиск/Фильтрация/Сортировка данных";
             this.ResumeLayout(false);
 
