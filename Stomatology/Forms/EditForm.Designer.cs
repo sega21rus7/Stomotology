@@ -31,6 +31,7 @@
             this.editView = new System.Windows.Forms.DataGridView();
             this.ShowButton = new System.Windows.Forms.Button();
             this.ChoiceTableBox = new System.Windows.Forms.ComboBox();
+            this.BackButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.editView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,11 +62,22 @@
             this.ChoiceTableBox.Size = new System.Drawing.Size(342, 28);
             this.ChoiceTableBox.TabIndex = 2;
             // 
+            // BackButton
+            // 
+            this.BackButton.Location = new System.Drawing.Point(1097, 28);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(155, 33);
+            this.BackButton.TabIndex = 3;
+            this.BackButton.Text = "Назад";
+            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            // 
             // EditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1285, 702);
+            this.Controls.Add(this.BackButton);
             this.Controls.Add(this.ChoiceTableBox);
             this.Controls.Add(this.ShowButton);
             this.Controls.Add(this.editView);
@@ -84,5 +96,6 @@
         protected System.Windows.Forms.DataGridView editView;
         protected System.Windows.Forms.Button ShowButton;
         protected System.Windows.Forms.ComboBox ChoiceTableBox;
+        protected System.Windows.Forms.Button BackButton;
     }
 }

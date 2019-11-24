@@ -62,5 +62,11 @@ namespace Stomatology.Forms
             adapter.Fill(dt);
             return dt;
         }
+
+        private void BackButton_Click(object sender, System.EventArgs e)
+        {
+            this.Hide();
+            (new MainForm()).Show();
+        }
     }
 }

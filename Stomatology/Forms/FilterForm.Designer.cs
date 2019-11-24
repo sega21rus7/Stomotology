@@ -96,6 +96,17 @@
             "Паспортные данные пациентов",
             "Услуги",
             "Типы услуг",
+            "Приемы",
+            "Адреса пациентов",
+            "Врачи",
+            "Ассистенты врачей",
+            "Должности ассистентов врачей",
+            "Должности врачей",
+            "Пациенты",
+            "Страховые полисы пациентов",
+            "Паспортные данные пациентов",
+            "Услуги",
+            "Типы услуг",
             "Приемы"});
             // 
             // SearchBox
@@ -117,7 +128,7 @@
             // 
             // FilterValueBox
             // 
-            this.FilterValueBox.Location = new System.Drawing.Point(943, 43);
+            this.FilterValueBox.Location = new System.Drawing.Point(879, 43);
             this.FilterValueBox.Name = "FilterValueBox";
             this.FilterValueBox.Size = new System.Drawing.Size(193, 26);
             this.FilterValueBox.TabIndex = 5;
@@ -126,7 +137,7 @@
             // FilterKeyBox
             // 
             this.FilterKeyBox.FormattingEnabled = true;
-            this.FilterKeyBox.Location = new System.Drawing.Point(686, 41);
+            this.FilterKeyBox.Location = new System.Drawing.Point(622, 41);
             this.FilterKeyBox.Name = "FilterKeyBox";
             this.FilterKeyBox.Size = new System.Drawing.Size(214, 28);
             this.FilterKeyBox.TabIndex = 6;
@@ -134,7 +145,7 @@
             // FilterLabel
             // 
             this.FilterLabel.AutoSize = true;
-            this.FilterLabel.Location = new System.Drawing.Point(846, 9);
+            this.FilterLabel.Location = new System.Drawing.Point(782, 9);
             this.FilterLabel.Name = "FilterLabel";
             this.FilterLabel.Size = new System.Drawing.Size(136, 20);
             this.FilterLabel.TabIndex = 7;
@@ -153,6 +164,7 @@
             this.MaximizeBox = false;
             this.Name = "FilterForm";
             this.Text = "Поиск/Фильтрация данных";
+            this.Controls.SetChildIndex(this.BackButton, 0);
             this.Controls.SetChildIndex(this.ShowButton, 0);
             this.Controls.SetChildIndex(this.ChoiceTableBox, 0);
             this.Controls.SetChildIndex(this.SearchBox, 0);
