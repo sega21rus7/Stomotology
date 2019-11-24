@@ -1,5 +1,6 @@
 ﻿using System.Windows.Forms;
 using System;
+using System.Data;
 
 namespace Stomatology.Forms
 {
@@ -19,7 +20,7 @@ namespace Stomatology.Forms
                 for (int j = 0; j < editView.ColumnCount; j++)
                     if (editView.Rows[i].Cells[j].Value != null)
                         if (editView.Rows[i].Cells[j].Value.ToString().IndexOf(
-                            searchBox.Text, StringComparison.CurrentCultureIgnoreCase) >= 0)
+                            SearchBox.Text, StringComparison.CurrentCultureIgnoreCase) >= 0)
                         {
                             searchedRowNum++;
                             if (searchedRowNum == 1)
@@ -29,6 +30,23 @@ namespace Stomatology.Forms
                         }
                 
             }
+        }
+
+        private void FilterBox_TextChanged(object sender, EventArgs e)
+        {
+            (editView.DataSource as DataTable).DefaultView.RowFilter =
+                String.Format("Convert({0},'System.String') contains '{1}%'", 
+                FilterKeyBox.Text, FilterValueBox.Text);
+        }
+
+        private void ShowButton_Click(object sender, EventArgs e)
+        {
+            var headers = new string[editView.ColumnCount];
+            for (var i = 0; i < headers.Length; i++)
+                headers[i] = editView.Columns[i].HeaderText;
+            FilterKeyBox.Items.Clear();
+            FilterKeyBox.Items.AddRange(headers);
+            FilterKeyBox.SelectedIndex = 0;
         }
     }
 }

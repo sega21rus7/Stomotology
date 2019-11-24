@@ -11,9 +11,9 @@ namespace Stomatology.Forms
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, System.EventArgs e)
+        private void ShowButton_Click(object sender, System.EventArgs e)
         {
-            var tableName = choiceTableBox.SelectedItem.ToString();
+            var tableName = ChoiceTableBox.SelectedItem.ToString();
             var className = TableAttrs.Attrs[tableName];
             editView.DataSource = GetExcelTable(className);
             PrepareDataGridView(editView);
@@ -35,8 +35,9 @@ namespace Stomatology.Forms
                 ServiceType.TableName,
                 Visit.TableName,
             };
-            choiceTableBox.Items.AddRange(tables);
-            choiceTableBox.SelectedIndex = 0;
+            ChoiceTableBox.Items.Clear();
+            ChoiceTableBox.Items.AddRange(tables);
+            ChoiceTableBox.SelectedIndex = 0;
         }
 
         private void PrepareDataGridView(DataGridView view)

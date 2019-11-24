@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.editView = new System.Windows.Forms.DataGridView();
-            this.showButton = new System.Windows.Forms.Button();
-            this.choiceTableBox = new System.Windows.Forms.ComboBox();
+            this.ShowButton = new System.Windows.Forms.Button();
+            this.ChoiceTableBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.editView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,31 +43,31 @@
             this.editView.Size = new System.Drawing.Size(1257, 519);
             this.editView.TabIndex = 0;
             // 
-            // showButton
+            // ShowButton
             // 
-            this.showButton.Location = new System.Drawing.Point(377, 31);
-            this.showButton.Name = "showButton";
-            this.showButton.Size = new System.Drawing.Size(164, 33);
-            this.showButton.TabIndex = 1;
-            this.showButton.Text = "Показать данные";
-            this.showButton.UseVisualStyleBackColor = true;
-            this.showButton.Click += new System.EventHandler(this.button1_Click);
+            this.ShowButton.Location = new System.Drawing.Point(377, 31);
+            this.ShowButton.Name = "ShowButton";
+            this.ShowButton.Size = new System.Drawing.Size(164, 33);
+            this.ShowButton.TabIndex = 1;
+            this.ShowButton.Text = "Показать данные";
+            this.ShowButton.UseVisualStyleBackColor = true;
+            this.ShowButton.Click += new System.EventHandler(this.ShowButton_Click);
             // 
-            // choiceTableBox
+            // ChoiceTableBox
             // 
-            this.choiceTableBox.FormattingEnabled = true;
-            this.choiceTableBox.Location = new System.Drawing.Point(12, 31);
-            this.choiceTableBox.Name = "choiceTableBox";
-            this.choiceTableBox.Size = new System.Drawing.Size(342, 28);
-            this.choiceTableBox.TabIndex = 2;
+            this.ChoiceTableBox.FormattingEnabled = true;
+            this.ChoiceTableBox.Location = new System.Drawing.Point(12, 31);
+            this.ChoiceTableBox.Name = "ChoiceTableBox";
+            this.ChoiceTableBox.Size = new System.Drawing.Size(342, 28);
+            this.ChoiceTableBox.TabIndex = 2;
             // 
             // EditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1285, 702);
-            this.Controls.Add(this.choiceTableBox);
-            this.Controls.Add(this.showButton);
+            this.Controls.Add(this.ChoiceTableBox);
+            this.Controls.Add(this.ShowButton);
             this.Controls.Add(this.editView);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "EditForm";
@@ -82,7 +82,7 @@
         #endregion
 
         protected System.Windows.Forms.DataGridView editView;
-        private System.Windows.Forms.Button showButton;
-        private System.Windows.Forms.ComboBox choiceTableBox;
+        protected System.Windows.Forms.Button ShowButton;
+        protected System.Windows.Forms.ComboBox ChoiceTableBox;
     }
 }
