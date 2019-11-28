@@ -127,6 +127,11 @@
             this.Name = "FilterForm";
             this.Text = "Поиск/Фильтрация данных";
             this.Load += new System.EventHandler(this.FilterForm_Load);
+<<<<<<< HEAD
+=======
+            this.Controls.SetChildIndex(this.AddButton, 0);
+            this.Controls.SetChildIndex(this.EditButton, 0);
+>>>>>>> parent of beabcf4... Revert "Заготовки форм добавления и редактирования данных"
             this.Controls.SetChildIndex(this.ExportButton, 0);
             this.Controls.SetChildIndex(this.BackButton, 0);
             this.Controls.SetChildIndex(this.ShowButton, 0);

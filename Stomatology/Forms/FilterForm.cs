@@ -49,7 +49,12 @@ namespace Stomatology.Forms
 
         private void FilterForm_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             DelButton.Hide();
+=======
+            AddButton.Hide();
+            EditButton.Hide();
+>>>>>>> parent of beabcf4... Revert "Заготовки форм добавления и редактирования данных"
         }
     }
 }
