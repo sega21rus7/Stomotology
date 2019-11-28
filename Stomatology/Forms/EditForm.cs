@@ -69,21 +69,10 @@ namespace Stomatology.Forms
             (new MainForm()).Show();
         }
 
-<<<<<<< HEAD
         private void DelButton_Click(object sender, System.EventArgs e)
         {
             int index = editView.SelectedCells[0].RowIndex;
             editView.Rows.RemoveAt(index);
-=======
-        private void AddButton_Click(object sender, System.EventArgs e)
-        {
-            (new AddDataForm()).Show();
-        }
-
-        private void EditButton_Click(object sender, System.EventArgs e)
-        {
-            (new EditDataForm()).Show();
->>>>>>> parent of beabcf4... Revert "Заготовки форм добавления и редактирования данных"
         }
     }
 }
