@@ -127,7 +127,6 @@
             this.Name = "FilterForm";
             this.Text = "Поиск/Фильтрация данных";
             this.Load += new System.EventHandler(this.FilterForm_Load);
-            this.Controls.SetChildIndex(this.AddButton, 0);
             this.Controls.SetChildIndex(this.ExportButton, 0);
             this.Controls.SetChildIndex(this.BackButton, 0);
             this.Controls.SetChildIndex(this.ShowButton, 0);

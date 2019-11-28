@@ -49,7 +49,6 @@ namespace Stomatology.Forms
 
         private void FilterForm_Load(object sender, EventArgs e)
         {
-            AddButton.Hide();
             DelButton.Hide();
         }
     }

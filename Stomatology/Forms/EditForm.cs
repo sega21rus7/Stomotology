@@ -69,11 +69,6 @@ namespace Stomatology.Forms
             (new MainForm()).Show();
         }
 
-        private void AddButton_Click(object sender, System.EventArgs e)
-        {
-            
-        }
-
         private void DelButton_Click(object sender, System.EventArgs e)
         {
             int index = editView.SelectedCells[0].RowIndex;
