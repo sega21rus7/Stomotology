@@ -68,15 +68,5 @@ namespace Stomatology.Forms
             this.Hide();
             (new MainForm()).Show();
         }
-
-        private void AddButton_Click(object sender, System.EventArgs e)
-        {
-            (new AddDataForm()).Show();
-        }
-
-        private void EditButton_Click(object sender, System.EventArgs e)
-        {
-            (new EditDataForm()).Show();
-        }
     }
 }
