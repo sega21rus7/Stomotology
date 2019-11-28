@@ -46,5 +46,11 @@ namespace Stomatology.Forms
                 headers[i] = editView.Columns[i].HeaderText;
             FillComboBox(FilterKeyBox, headers);
         }
+
+        private void FilterForm_Load(object sender, EventArgs e)
+        {
+            AddButton.Hide();
+            DelButton.Hide();
+        }
     }
 }
