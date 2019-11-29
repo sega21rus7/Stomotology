@@ -77,12 +77,12 @@ namespace Stomatology.Forms
 
         private void AddDataButton_Click(object sender, System.EventArgs e)
         {
-
+            (new AddDataForm()).Show();
         }
 
         private void EditDataButton_Click(object sender, System.EventArgs e)
         {
-
+            (new EditDataForm()).Show();
         }
     }
 }

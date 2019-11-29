@@ -43,9 +43,8 @@
             this.pictureHello.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureHello.Image = ((System.Drawing.Image)(resources.GetObject("pictureHello.Image")));
             this.pictureHello.Location = new System.Drawing.Point(0, 0);
-            this.pictureHello.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureHello.Name = "pictureHello";
-            this.pictureHello.Size = new System.Drawing.Size(638, 471);
+            this.pictureHello.Size = new System.Drawing.Size(957, 725);
             this.pictureHello.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureHello.TabIndex = 2;
             this.pictureHello.TabStop = false;
@@ -56,47 +55,43 @@
             this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel.Controls.Add(this.buttonFilter, 0, 1);
             this.tableLayoutPanel.Controls.Add(this.buttonEdit, 0, 0);
-            this.tableLayoutPanel.Location = new System.Drawing.Point(191, 255);
-            this.tableLayoutPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel.Location = new System.Drawing.Point(286, 392);
             this.tableLayoutPanel.Name = "tableLayoutPanel";
             this.tableLayoutPanel.RowCount = 2;
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel.Size = new System.Drawing.Size(287, 107);
+            this.tableLayoutPanel.Size = new System.Drawing.Size(430, 165);
             this.tableLayoutPanel.TabIndex = 3;
             // 
             // buttonFilter
             // 
             this.buttonFilter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonFilter.Location = new System.Drawing.Point(2, 55);
-            this.buttonFilter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonFilter.Location = new System.Drawing.Point(3, 85);
             this.buttonFilter.Name = "buttonFilter";
-            this.buttonFilter.Size = new System.Drawing.Size(283, 50);
+            this.buttonFilter.Size = new System.Drawing.Size(424, 77);
             this.buttonFilter.TabIndex = 3;
-            this.buttonFilter.Text = "Найти/Отфильтровать/Отсортировать";
+            this.buttonFilter.Text = "Найти/Фильтровать данные";
             this.buttonFilter.UseVisualStyleBackColor = true;
             this.buttonFilter.Click += new System.EventHandler(this.buttonFilter_Click);
             // 
             // buttonEdit
             // 
             this.buttonEdit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonEdit.Location = new System.Drawing.Point(2, 2);
-            this.buttonEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonEdit.Location = new System.Drawing.Point(3, 3);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(283, 49);
+            this.buttonEdit.Size = new System.Drawing.Size(424, 76);
             this.buttonEdit.TabIndex = 2;
-            this.buttonEdit.Text = "Ввести/Отредактировать данные";
+            this.buttonEdit.Text = "Добавить/Редактировать данные";
             this.buttonEdit.UseVisualStyleBackColor = true;
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(638, 471);
+            this.ClientSize = new System.Drawing.Size(957, 725);
             this.Controls.Add(this.tableLayoutPanel);
             this.Controls.Add(this.pictureHello);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Приветственное меню";

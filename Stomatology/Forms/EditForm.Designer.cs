@@ -109,9 +109,9 @@
             // 
             this.EditDataButton.Location = new System.Drawing.Point(440, 91);
             this.EditDataButton.Name = "EditDataButton";
-            this.EditDataButton.Size = new System.Drawing.Size(164, 32);
+            this.EditDataButton.Size = new System.Drawing.Size(221, 32);
             this.EditDataButton.TabIndex = 8;
-            this.EditDataButton.Text = "Изменить данные";
+            this.EditDataButton.Text = "Редактировать данные";
             this.EditDataButton.UseVisualStyleBackColor = true;
             this.EditDataButton.Click += new System.EventHandler(this.EditDataButton_Click);
             // 
@@ -131,7 +131,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "EditForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Ввод/Редактирование данных";
+            this.Text = "Добавление/Редактирование данных";
             this.Load += new System.EventHandler(this.EditForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.editView)).EndInit();
             this.ResumeLayout(false);
