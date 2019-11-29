@@ -52,7 +52,9 @@
     <Compile Include="Forms\AddDataForm.Designer.cs">
       <DependentUpon>AddDataForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\EditDataForm.cs" />
+    <Compile Include="Forms\EditDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\EditDataForm.Designer.cs">
       <DependentUpon>EditDataForm.cs</DependentUpon>
     </Compile>
