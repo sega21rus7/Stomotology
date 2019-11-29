@@ -11,7 +11,7 @@ namespace Stomatology.Forms
             InitializeComponent();
         }
 
-        private void ShowButton_Click(object sender, System.EventArgs e)
+        private void ShowDataButton_Click(object sender, System.EventArgs e)
         {
             var tableName = ChoiceTableBox.SelectedItem.ToString();
             var className = TableAttrs.Attrs[tableName];
@@ -69,10 +69,20 @@ namespace Stomatology.Forms
             (new MainForm()).Show();
         }
 
-        private void DelButton_Click(object sender, System.EventArgs e)
+        private void DelDataButton_Click(object sender, System.EventArgs e)
         {
             int index = editView.SelectedCells[0].RowIndex;
             editView.Rows.RemoveAt(index);
+        }
+
+        private void AddDataButton_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void EditDataButton_Click(object sender, System.EventArgs e)
+        {
+
         }
     }
 }

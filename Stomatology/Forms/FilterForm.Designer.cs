@@ -37,7 +37,7 @@
             // 
             // ShowButton
             // 
-            this.ShowButton.Click += new System.EventHandler(this.ShowButton_Click);
+            this.ShowDataButton.Click += new System.EventHandler(this.ShowButton_Click);
             // 
             // ChoiceTableBox
             // 
@@ -129,7 +129,7 @@
             this.Load += new System.EventHandler(this.FilterForm_Load);
             this.Controls.SetChildIndex(this.ExportButton, 0);
             this.Controls.SetChildIndex(this.BackButton, 0);
-            this.Controls.SetChildIndex(this.ShowButton, 0);
+            this.Controls.SetChildIndex(this.ShowDataButton, 0);
             this.Controls.SetChildIndex(this.ChoiceTableBox, 0);
             this.Controls.SetChildIndex(this.SearchBox, 0);
             this.Controls.SetChildIndex(this.SearchButton, 0);
