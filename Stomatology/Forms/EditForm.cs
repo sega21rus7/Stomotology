@@ -13,9 +13,9 @@ namespace Stomatology.Forms
 
         private void ShowDataButton_Click(object sender, System.EventArgs e)
         {
-            var tableName = ChoiceTableBox.SelectedItem.ToString();
-            var className = TableAttrs.Attrs[tableName];
-            editView.DataSource = GetExcelTable(className);
+            var choice = ChoiceTableBox.SelectedItem.ToString();
+            var tableName = TableAttrs.Attrs[choice];
+            editView.DataSource = GetExcelTable(tableName);
             PrepareDataGridView();
         }
 
@@ -51,9 +51,9 @@ namespace Stomatology.Forms
             editView.AllowUserToAddRows = false;
         }
 
-        private DataTable GetExcelTable(string fileName)
+        private DataTable GetExcelTable(string tableName)
         {
-            var path = @"..\..\..\Tables\" + fileName + ".xls";
+            var path = @"..\..\..\Tables\" + tableName + ".xls";
             var connPath = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + path +
                 ";Extended Properties=\"Excel 8.0;HDR=Yes;\";";
             var conn = new OleDbConnection(connPath);
@@ -71,8 +71,15 @@ namespace Stomatology.Forms
 
         private void DelDataButton_Click(object sender, System.EventArgs e)
         {
-            int index = editView.SelectedCells[0].RowIndex;
-            editView.Rows.RemoveAt(index);
+            try
+            {
+                int index = editView.SelectedCells[0].RowIndex;
+                editView.Rows.RemoveAt(index);
+            }
+            catch
+            {
+                MessageBox.Show("Ни одна из таблиц не открыта!");
+            }
         }
 
         private void AddDataButton_Click(object sender, System.EventArgs e)

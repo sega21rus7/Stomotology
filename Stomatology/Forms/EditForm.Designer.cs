@@ -52,9 +52,9 @@
             // 
             this.ShowDataButton.Location = new System.Drawing.Point(376, 31);
             this.ShowDataButton.Name = "ShowDataButton";
-            this.ShowDataButton.Size = new System.Drawing.Size(164, 32);
+            this.ShowDataButton.Size = new System.Drawing.Size(177, 32);
             this.ShowDataButton.TabIndex = 1;
-            this.ShowDataButton.Text = "Показать данные";
+            this.ShowDataButton.Text = "Показать таблицу";
             this.ShowDataButton.UseVisualStyleBackColor = true;
             this.ShowDataButton.Click += new System.EventHandler(this.ShowDataButton_Click);
             // 

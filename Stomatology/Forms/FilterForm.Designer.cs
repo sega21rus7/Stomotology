@@ -35,24 +35,81 @@
             this.FilterLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // ShowButton
+            // ShowDataButton
             // 
             this.ShowDataButton.Click += new System.EventHandler(this.ShowButton_Click);
             // 
+            // ChoiceTableBox
+            // 
+            this.ChoiceTableBox.Items.AddRange(new object[] {
+            "Адреса пациентов",
+            "Врачи",
+            "Ассистенты врачей",
+            "Должности ассистентов врачей",
+            "Должности врачей",
+            "Пациенты",
+            "Страховые полисы пациентов",
+            "Паспортные данные пациентов",
+            "Услуги",
+            "Типы услуг",
+            "Приемы",
+            "Адреса пациентов",
+            "Врачи",
+            "Ассистенты врачей",
+            "Должности ассистентов врачей",
+            "Должности врачей",
+            "Пациенты",
+            "Страховые полисы пациентов",
+            "Паспортные данные пациентов",
+            "Услуги",
+            "Типы услуг",
+            "Приемы",
+            "Адреса пациентов",
+            "Врачи",
+            "Ассистенты врачей",
+            "Должности ассистентов врачей",
+            "Должности врачей",
+            "Пациенты",
+            "Страховые полисы пациентов",
+            "Паспортные данные пациентов",
+            "Услуги",
+            "Типы услуг",
+            "Приемы",
+            "Адреса пациентов",
+            "Врачи",
+            "Ассистенты врачей",
+            "Должности ассистентов врачей",
+            "Должности врачей",
+            "Пациенты",
+            "Страховые полисы пациентов",
+            "Паспортные данные пациентов",
+            "Услуги",
+            "Типы услуг",
+            "Приемы",
+            "Адреса пациентов",
+            "Врачи",
+            "Ассистенты врачей",
+            "Должности ассистентов врачей",
+            "Должности врачей",
+            "Пациенты",
+            "Страховые полисы пациентов",
+            "Паспортные данные пациентов",
+            "Услуги",
+            "Типы услуг",
+            "Приемы"});
+            // 
             // SearchBox
             // 
-            this.SearchBox.Location = new System.Drawing.Point(8, 51);
-            this.SearchBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SearchBox.Location = new System.Drawing.Point(12, 78);
             this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(229, 20);
+            this.SearchBox.Size = new System.Drawing.Size(342, 26);
             this.SearchBox.TabIndex = 3;
             // 
             // SearchButton
             // 
-            this.SearchButton.Location = new System.Drawing.Point(251, 48);
-            this.SearchButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SearchButton.Location = new System.Drawing.Point(376, 78);
             this.SearchButton.Name = "SearchButton";
-            this.SearchButton.Size = new System.Drawing.Size(109, 24);
+            this.SearchButton.Size = new System.Drawing.Size(177, 30);
             this.SearchButton.TabIndex = 4;
             this.SearchButton.Text = "Поиск";
             this.SearchButton.UseVisualStyleBackColor = true;
@@ -60,47 +117,47 @@
             // 
             // FilterValueBox
             // 
-            this.FilterValueBox.Location = new System.Drawing.Point(586, 28);
-            this.FilterValueBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FilterValueBox.Location = new System.Drawing.Point(742, 78);
             this.FilterValueBox.Name = "FilterValueBox";
-            this.FilterValueBox.Size = new System.Drawing.Size(130, 20);
+            this.FilterValueBox.Size = new System.Drawing.Size(214, 26);
             this.FilterValueBox.TabIndex = 5;
             this.FilterValueBox.TextChanged += new System.EventHandler(this.FilterBox_TextChanged);
             // 
             // FilterKeyBox
             // 
             this.FilterKeyBox.FormattingEnabled = true;
-            this.FilterKeyBox.Location = new System.Drawing.Point(415, 27);
-            this.FilterKeyBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FilterKeyBox.Location = new System.Drawing.Point(742, 35);
             this.FilterKeyBox.Name = "FilterKeyBox";
-            this.FilterKeyBox.Size = new System.Drawing.Size(144, 21);
+            this.FilterKeyBox.Size = new System.Drawing.Size(214, 28);
             this.FilterKeyBox.TabIndex = 6;
             // 
             // FilterLabel
             // 
             this.FilterLabel.AutoSize = true;
-            this.FilterLabel.Location = new System.Drawing.Point(521, 6);
-            this.FilterLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.FilterLabel.Location = new System.Drawing.Point(782, 9);
             this.FilterLabel.Name = "FilterLabel";
-            this.FilterLabel.Size = new System.Drawing.Size(91, 13);
+            this.FilterLabel.Size = new System.Drawing.Size(136, 20);
             this.FilterLabel.TabIndex = 7;
             this.FilterLabel.Text = "Фильтр по полю";
             // 
             // FilterForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(857, 456);
+            this.ClientSize = new System.Drawing.Size(1286, 702);
             this.Controls.Add(this.FilterLabel);
             this.Controls.Add(this.FilterKeyBox);
             this.Controls.Add(this.FilterValueBox);
             this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.SearchBox);
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "FilterForm";
             this.Text = "Поиск/Фильтрация данных";
             this.Load += new System.EventHandler(this.FilterForm_Load);
+            this.Controls.SetChildIndex(this.DelDataButton, 0);
+            this.Controls.SetChildIndex(this.AddDataButton, 0);
+            this.Controls.SetChildIndex(this.EditDataButton, 0);
             this.Controls.SetChildIndex(this.ExportButton, 0);
             this.Controls.SetChildIndex(this.BackButton, 0);
             this.Controls.SetChildIndex(this.ShowDataButton, 0);
