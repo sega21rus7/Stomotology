@@ -13,8 +13,7 @@ namespace Stomatology.Forms
 
         private void ShowDataButton_Click(object sender, System.EventArgs e)
         {
-            var choice = ChoiceTableBox.SelectedItem.ToString();
-            var tableName = TableAttrs.Attrs[choice];
+            var tableName = GetTableName();
             editView.DataSource = GetExcelTable(tableName);
             PrepareDataGridView();
         }
@@ -51,6 +50,12 @@ namespace Stomatology.Forms
             editView.AllowUserToAddRows = false;
         }
 
+        private string GetTableName()
+        {
+            var choice = ChoiceTableBox.SelectedItem.ToString();
+            return TableAttrs.Attrs[choice];
+        }
+
         private DataTable GetExcelTable(string tableName)
         {
             var path = @"..\..\..\Tables\" + tableName + ".xls";
@@ -78,18 +83,30 @@ namespace Stomatology.Forms
             }
             catch
             {
-                MessageBox.Show("Ни одна из таблиц не открыта!");
+                MessageBox.Show("Ни одна из строк для удаления не выделена!");
             }
         }
 
         private void AddDataButton_Click(object sender, System.EventArgs e)
         {
-            (new AddDataForm()).Show();
+            try
+            {
+                var dt = (DataTable)editView.DataSource;
+                DataRow drToAdd = dt.NewRow();
+                dt.Rows.Add(drToAdd);
+                dt.AcceptChanges();
+                editView.DataSource = dt;
+                editView.CurrentCell = editView.Rows[editView.RowCount - 1].Cells[0];
+            }
+            catch
+            {
+                MessageBox.Show("Ни одна из таблиц не открыта!");
+            }
         }
 
         private void EditDataButton_Click(object sender, System.EventArgs e)
         {
-            (new EditDataForm()).Show();
+            MessageBox.Show("Отредактируйте строку в таблице и воспользуйтесь экспортом!");
         }
     }
 }
