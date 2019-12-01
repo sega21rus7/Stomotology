@@ -1,6 +1,7 @@
 ﻿using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Data;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Stomatology.Forms
 {
@@ -107,6 +108,33 @@ namespace Stomatology.Forms
         private void EditDataButton_Click(object sender, System.EventArgs e)
         {
             MessageBox.Show("Отредактируйте строку в таблице и воспользуйтесь экспортом!");
+        }
+
+        private void ExportButton_Click(object sender, System.EventArgs e)
+        {
+            if (editView.DataSource == null)
+            {
+                MessageBox.Show("Ни одна из таблиц не открыта!");
+                return;
+            }
+
+            Excel.Application ExcelApp = new Microsoft.Office.Interop.Excel.Application();
+            Excel.Workbook ExcelWorkBook;
+            Microsoft.Office.Interop.Excel.Worksheet ExcelWorkSheet;
+            //Книга.
+            ExcelWorkBook = ExcelApp.Workbooks.Add(System.Reflection.Missing.Value);
+            //Таблица.
+            ExcelWorkSheet = (Microsoft.Office.Interop.Excel.Worksheet)ExcelWorkBook.Worksheets.get_Item(1);
+
+            for (int j = 0; j < editView.ColumnCount; j++)
+                ExcelApp.Cells[1, j + 1] = editView.Columns[j].HeaderText;
+
+            for (int i = 1; i < editView.Rows.Count; i++)
+                for (int j = 0; j < editView.ColumnCount; j++)
+                    ExcelApp.Cells[i + 1, j + 1] = editView.Rows[i].Cells[j].Value;
+            //Вызываем нашу созданную эксельку.
+            ExcelApp.Visible = true;
+            ExcelApp.UserControl = true;
         }
     }
 }

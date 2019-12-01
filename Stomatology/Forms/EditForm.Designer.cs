@@ -82,8 +82,9 @@
             this.ExportButton.Name = "ExportButton";
             this.ExportButton.Size = new System.Drawing.Size(160, 32);
             this.ExportButton.TabIndex = 4;
-            this.ExportButton.Text = "Экспорт в Excel";
+            this.ExportButton.Text = "Экспорт";
             this.ExportButton.UseVisualStyleBackColor = true;
+            this.ExportButton.Click += new System.EventHandler(this.ExportButton_Click);
             // 
             // DelDataButton
             // 
