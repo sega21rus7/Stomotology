@@ -42,17 +42,20 @@
             // editView
             // 
             this.editView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.editView.Location = new System.Drawing.Point(12, 155);
+            this.editView.Location = new System.Drawing.Point(8, 101);
+            this.editView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.editView.Name = "editView";
             this.editView.RowTemplate.Height = 28;
-            this.editView.Size = new System.Drawing.Size(1257, 518);
+            this.editView.Size = new System.Drawing.Size(838, 337);
             this.editView.TabIndex = 0;
+            this.editView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.editView_DataError);
             // 
             // ShowDataButton
             // 
-            this.ShowDataButton.Location = new System.Drawing.Point(376, 31);
+            this.ShowDataButton.Location = new System.Drawing.Point(251, 20);
+            this.ShowDataButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ShowDataButton.Name = "ShowDataButton";
-            this.ShowDataButton.Size = new System.Drawing.Size(177, 32);
+            this.ShowDataButton.Size = new System.Drawing.Size(118, 21);
             this.ShowDataButton.TabIndex = 1;
             this.ShowDataButton.Text = "Показать таблицу";
             this.ShowDataButton.UseVisualStyleBackColor = true;
@@ -61,16 +64,18 @@
             // ChoiceTableBox
             // 
             this.ChoiceTableBox.FormattingEnabled = true;
-            this.ChoiceTableBox.Location = new System.Drawing.Point(12, 31);
+            this.ChoiceTableBox.Location = new System.Drawing.Point(8, 20);
+            this.ChoiceTableBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ChoiceTableBox.Name = "ChoiceTableBox";
-            this.ChoiceTableBox.Size = new System.Drawing.Size(342, 28);
+            this.ChoiceTableBox.Size = new System.Drawing.Size(229, 21);
             this.ChoiceTableBox.TabIndex = 2;
             // 
             // BackButton
             // 
-            this.BackButton.Location = new System.Drawing.Point(1092, 28);
+            this.BackButton.Location = new System.Drawing.Point(728, 18);
+            this.BackButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(160, 32);
+            this.BackButton.Size = new System.Drawing.Size(107, 21);
             this.BackButton.TabIndex = 3;
             this.BackButton.Text = "Назад";
             this.BackButton.UseVisualStyleBackColor = true;
@@ -78,9 +83,10 @@
             // 
             // ExportButton
             // 
-            this.ExportButton.Location = new System.Drawing.Point(1092, 82);
+            this.ExportButton.Location = new System.Drawing.Point(728, 53);
+            this.ExportButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ExportButton.Name = "ExportButton";
-            this.ExportButton.Size = new System.Drawing.Size(160, 32);
+            this.ExportButton.Size = new System.Drawing.Size(107, 21);
             this.ExportButton.TabIndex = 4;
             this.ExportButton.Text = "Экспорт";
             this.ExportButton.UseVisualStyleBackColor = true;
@@ -88,9 +94,10 @@
             // 
             // DelDataButton
             // 
-            this.DelDataButton.Location = new System.Drawing.Point(224, 91);
+            this.DelDataButton.Location = new System.Drawing.Point(149, 59);
+            this.DelDataButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DelDataButton.Name = "DelDataButton";
-            this.DelDataButton.Size = new System.Drawing.Size(164, 32);
+            this.DelDataButton.Size = new System.Drawing.Size(109, 21);
             this.DelDataButton.TabIndex = 6;
             this.DelDataButton.Text = "Удалить данные";
             this.DelDataButton.UseVisualStyleBackColor = true;
@@ -98,9 +105,10 @@
             // 
             // AddDataButton
             // 
-            this.AddDataButton.Location = new System.Drawing.Point(12, 91);
+            this.AddDataButton.Location = new System.Drawing.Point(8, 59);
+            this.AddDataButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AddDataButton.Name = "AddDataButton";
-            this.AddDataButton.Size = new System.Drawing.Size(164, 32);
+            this.AddDataButton.Size = new System.Drawing.Size(109, 21);
             this.AddDataButton.TabIndex = 7;
             this.AddDataButton.Text = "Добавить данные";
             this.AddDataButton.UseVisualStyleBackColor = true;
@@ -108,9 +116,10 @@
             // 
             // EditDataButton
             // 
-            this.EditDataButton.Location = new System.Drawing.Point(440, 91);
+            this.EditDataButton.Location = new System.Drawing.Point(293, 59);
+            this.EditDataButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.EditDataButton.Name = "EditDataButton";
-            this.EditDataButton.Size = new System.Drawing.Size(221, 32);
+            this.EditDataButton.Size = new System.Drawing.Size(147, 21);
             this.EditDataButton.TabIndex = 8;
             this.EditDataButton.Text = "Редактировать данные";
             this.EditDataButton.UseVisualStyleBackColor = true;
@@ -118,9 +127,9 @@
             // 
             // EditForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1286, 702);
+            this.ClientSize = new System.Drawing.Size(857, 456);
             this.Controls.Add(this.EditDataButton);
             this.Controls.Add(this.AddDataButton);
             this.Controls.Add(this.DelDataButton);
@@ -130,6 +139,7 @@
             this.Controls.Add(this.ShowDataButton);
             this.Controls.Add(this.editView);
             this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "EditForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Добавление/Редактирование данных";

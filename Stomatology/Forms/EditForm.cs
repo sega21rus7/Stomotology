@@ -136,5 +136,11 @@ namespace Stomatology.Forms
             ExcelApp.Visible = true;
             ExcelApp.UserControl = true;
         }
+
+        private void editView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            MessageBox.Show("Произошла ошибка ввода данных!\nИсправьте ее или выйдите из режима ввода нажатием Esc.");
+            e.ThrowException = false;    
+        }
     }
 }
