@@ -2,7 +2,6 @@
 using System.Data.OleDb;
 using System.Data;
 using Excel = Microsoft.Office.Interop.Excel;
-using System.IO;
 
 namespace Stomatology.Forms
 {
@@ -118,15 +117,7 @@ namespace Stomatology.Forms
                 MessageBox.Show("Ни одна из таблиц не открыта!");
                 return;
             }
-            string path = "";
-            var res = MessageBox.Show("Экспортировать в тот же файл?(Выберите Да)\nВ новый файл?(Выберите Нет)", "Экспорт", MessageBoxButtons.YesNo);
-            if (res == DialogResult.Yes)
-                path = Directory.GetCurrentDirectory() + @"..\..\..\..\Tables\" + GetTableName() + ".xls";
-            ExportTable(path);
-        }
 
-        private void ExportTable(string path = "")
-        {
             Excel.Application ExcelApp = new Microsoft.Office.Interop.Excel.Application();
             Excel.Workbook ExcelWorkBook;
             Microsoft.Office.Interop.Excel.Worksheet ExcelWorkSheet;
@@ -141,21 +132,9 @@ namespace Stomatology.Forms
             for (int i = 1; i < editView.Rows.Count; i++)
                 for (int j = 0; j < editView.ColumnCount; j++)
                     ExcelApp.Cells[i + 1, j + 1] = editView.Rows[i].Cells[j].Value;
-
-            ExcelWorkSheet.Columns.EntireColumn.AutoFit();
-
-            if (path == "")
-            {
-                //Вызываем нашу созданную эксельку.
-                ExcelApp.Visible = true;
-                ExcelApp.UserControl = true;
-            }
-            else
-            {
-                ExcelApp.AlertBeforeOverwriting = false;
-                ExcelWorkBook.SaveAs(path);
-                ExcelApp.Quit();
-            }
+            //Вызываем нашу созданную эксельку.
+            ExcelApp.Visible = true;
+            ExcelApp.UserControl = true;
         }
     }
 }
